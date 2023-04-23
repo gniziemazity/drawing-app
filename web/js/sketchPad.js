@@ -53,6 +53,7 @@ class SketchPad{
       this.canvas.ontouchmove=(evt)=>{
          const loc=evt.touches[0];
          this.canvas.onmousemove(loc);
+         evt.preventDefault()
       }
       document.ontouchend=()=>{
          document.onmouseup();
